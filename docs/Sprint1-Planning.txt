@@ -1,0 +1,14 @@
+Subteam A: Hannah, Tayo
+Subteam B: Collin, Sashe, Ella
+
+Agile practices we are using:
+    Pair Programming:
+    SCRUM Methodology 
+    XP methdology
+
+(complete after we finish!)
+Agile Retrospective Template:
+         What went well?
+         What could have gone better?
+         What will we try next?
+         What Questions do we have?
