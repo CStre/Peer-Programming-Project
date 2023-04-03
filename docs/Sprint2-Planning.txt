@@ -1,0 +1,89 @@
+Sprint Planning:
+For sprint 2, our goal will be to update all of the classes and tests we already have implemented from part 1 of the project. We will also be creating the new classes and tests necessary for the child and adult versions of both Dreamly and AcheAway pills. We plan to get a few things done before spring break, but ultimately have sprint 1 finished by the Tuesday that we get back from break. We have a meeting planned in the library to discuss where we are at, and discuss our set timeline once we are all back in town. We have also decided to switch up the sub-teams for each sprint.
+
+Sprint Backlog:
+> Update GelCap
+> Update the tests for GelCap
+> Update Dreamly and AcheAway
+> Update the tests for Dreamly and AcheAway
+> Create child and adult versions of Dreamly
+> Create tests for the child and adult version of Dreamly
+> Create child and adult versions of AcheAway
+> Create tests for the child and adult versions of AcheAway
+
+Subteam A: Ella, Tayo
+Subteam B: Collin, Hannah, Sashe
+
+Subteam A backlog tasks:
+> Update the demo class, archive the old branches, actually write out sprint2
+> Write out this sprint review doc
+> Update Dreamly and Acheaway
+> Create child and adult versions of Dreamly
+
+Subteam B backlog tasks:
+> Update GelCap
+> Update the tests for GelCap
+> Update the tests for Dreamly and AcheAway
+> Create child and adult versions of AcheAway
+> Create tests for the child and adult version of Dreamly
+> Create child and adult versions of AcheAway
+> Create tests for the child and adult version of AcheAway
+
+
+-----------------------------------------------------------------------------------
+END OF SPRINT
+
+Sprint Review:
+(Discuss your product at this point. Does it work? Are you happy with the code you have created?)
+
+Sprint Retrospective:
+	 What went well?
+         What could have gone better?
+         What will we try next?
+         What Questions do we have?
+
+Ella:
+	 What went well?
+Meeting before spring break and divy-ing the responsibility, setting an accurate timeframe for things to get done.
+         What could have gone better?
+If spring break wasn't smack in the middle of this project.
+         What will we try next?
+To keep organized and stay on top of the work, to check others work as well.
+         What Questions do we have?
+No questions... yet.
+
+Hannah:
+	    What went well?
+     planning together and writing down what we needed to do before spring break.
+         What could have gone better?
+    We forgot to upload our sprint planning  in the sprint-planning.txt file instead of the white board.
+         What will we try next?
+    Start off the sprint and be more organized
+         What Questions do we have?
+    How to divide the work better and how can we make sure people get their work done and when they said they were going to get it done?
+
+Tayo:
+	 What went well?
+      Our planning session felt very productive. We made our teams, figured out what needs to get done and divided the work into 3 sprints. We planned to meet on Thursday.
+         What could have gone better?
+     We often got work done at different times which can be difficult because sometimes our work relied on others.
+         What will we try next?
+     We will try to meet up earlier to make sure we can get ordered in what to do first.
+         What Questions do we have?
+         How can we divide things better within teams to get things done in a timely matter.
+
+Sashe:
+	 What went well? More productive; we met before Spring Break and divided our work on a whiteboard. Got our work done on time.
+         What could have gone better? Should have originally done our Sprint planning in the Sprint2-Planning.txt file instead of on a white board/shared google doc.
+         What will we try next? Start off with our Sprint planning being done in the txt files instead of using a less organized method.
+         What Questions do we have? How can we better divide work to avoid unbalanced work in each Sprint? 
+
+Collin:
+	 What went well?
+        Going through and making the parent and childs went really well and was very efficient. I was also pretty fun!
+        What could have gone better?
+        Sprint planning could have been better and the communication as well. We need to discuss dependencies more so that we don't work on code too early.
+        What will we try next?
+        We need to emphasize planning and focus on building a plan and following from the start. We also need to check over eachother often and help plan.
+        What Questions do we have?
+        How we can communciate and divide work more efficiently. 

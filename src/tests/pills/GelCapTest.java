@@ -1,43 +1,38 @@
-package pills;
-
 /**
+ *  SoftGel Project Part 2
+ * 
  * Title:           GelCapTest
  * Files:           GelCapTest.java
  * Semester:        Spring 2023
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
  * 
- * @author:         Hannah Boulet,
- *                  Tayo Olofintuyi
- *  
+ * @author          Hannah Boulet, 
+ *                  Collin Streitman, 
+ *                  Sashe Nikolov
  * 
- * Group Name:      SlayFam, Subteam A
- * @version:        2/27/2023
+ * Group Name:      SlayFam, Subteam B
+ * Sprint:          2
+ * @version         4/02/2023
  */
 
-//general imports needed for the test.
+package pills;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
-
-import org.junit.jupiter.api.AfterEach;
-
 import org.junit.jupiter.api.Test;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+
 
 public class GelCapTest
 {
     // Strings for the tests and formating.
     // These are general formating strings.
-    private static final String MANUFACTURE_FSTRING = "Manufacturing...\n"
-            + "Adding casing: X\n"
-            + "Adding solution: Y\n"
-            + "Adding active ingredient: Z\n";
+
     private static final String TOSTRING_FSTRING = "GelCap { name: %s,"
-            + " color: %s,"
-            + "size: %.1f, strength: %.1f }";
+        + " color: %s,"
+        + " size: %.1f, strength: %.1f }";
     private static final String DESCRIPTION_FSTRING = "%s pill, color: %s,"
-            + "size: %.1f, strength: %.1f";
+        + " size: %.1f, strength: %.1f";
     // General strings and setting them to values.
     private static final String NAME = "EXPERIMENT PILL";
     private static final double STRENGTH = 9.0;
@@ -49,24 +44,13 @@ public class GelCapTest
     // GelcapMock object
     private GelCapMock testGelCap;
 
-    private PrintStream oldOut;
 
     // this is needed for the output for the testmanufactureprocess
-    private ByteArrayOutputStream output = new ByteArrayOutputStream();
 
     @BeforeEach
     public void setUp() 
     {
-        this.oldOut = System.out;
-        testGelCap = new GelCapMock(NAME, STRENGTH, SIZE, COLOR);
-        System.setOut(new PrintStream(output));
-    }
-
-    @AfterEach
-    public void afterEach()
-    {
-        System.setOut(System.out);
-        System.setOut(oldOut);
+        testGelCap = new GelCapMock(NAME, STRENGTH, SIZE, COLOR, CASING, SOLUTION, ACTIVE);
     }
 
     /**
@@ -151,26 +135,7 @@ public class GelCapTest
     {
         String expected = String.format(DESCRIPTION_FSTRING,
                 NAME, COLOR, SIZE, STRENGTH);
-        assertEquals(expected, testGelCap.getDescription());
-    }
-
-    /**
-     * @return output string using trim to fix formating.
-     */
-    private String getOutput()
-    {
-        return output.toString().trim() + "\n";
-    }
-
-    /***
-     * Assert equals to test manufacturing process.
-     */
-    @Test
-    public void testManufactureProcess()
-    {
-        testGelCap.manufacture();
-        String expectedOutput = MANUFACTURE_FSTRING;
-        assertEquals(expectedOutput, getOutput());
+        assertEquals(expected, testGelCap.description());
     }
 
     /**
@@ -178,12 +143,6 @@ public class GelCapTest
      */
     private class GelCapMock extends GelCap
     {
-        private String casing;
-        private String solution;
-        private String active;
-        private double strength;
-        private double size;
-        private String color;
 
         /**
          * Constructs a new GelCapMock object
@@ -199,123 +158,14 @@ public class GelCapTest
          * @param strength the strength of the pill.
          * @param size     the size of the pill.
          * @param color    the color of the pill.
+         * @param casing   the casing of the pill
+         * @param solution the solution
+         * @param active   the active
          */
-        public GelCapMock(String name, double strength,
-                double size, String color) 
+        public GelCapMock(String name, double strength, double size, String color, String casing, 
+            String solution, String active)
         {
-            super(name, strength, size, color);
-            casing = "";
-            solution = "";
-            active = "";
-            this.strength = strength;
-            this.size = size;
-            this.color = color;
-            addCasing();
-            addActive();
-            addSolution();
-        }
-
-        /** */
-        public void manufacture()
-	{
-            System.out.println("Manufacturing...");
-            addCasing();
-            addSolution();
-            addActive();
-        }
-
-        /**
-         * @return stength of the pill
-         */
-        public double getStrength()
-        {
-            return strength;
-        }
-
-        /**
-         * @return stength of the pill.
-         */
-        public double getSize()
-	{
-            return size;
-        }
-
-        /**
-         * @return color of the pill.
-         */
-        public String getColor()
-	{
-            return color;
-        }
-
-        /**
-         * @return Casing of the pill.
-         */
-        public String getCasing()
-	{
-            return casing;
-        }
-
-        /**
-         * @return Solution of the pill.
-         */
-        public String getSolution()
-	{
-            return solution;
-        }
-
-        /**
-         * @return Active of the pill.
-         */
-        public String getActive()
-	{
-            return active;
-        }
-
-        /**
-         * Print casing.
-         */
-        protected void addCasing()
-	{
-            casing = "X";
-            System.out.println("Adding casing: " + casing);
-        }
-
-        /**
-         * Print solution.
-         */
-        protected void addSolution()
-	{
-            solution = "Y";
-            System.out.println("Adding solution: " + solution);
-        }
-
-        /**
-         * addactive string.
-         */
-        protected void addActive()
-	{
-            active = "Z";
-            System.out.println("Adding active ingredient: " + active);
-        }
-
-        /**
-         * @return formated description.
-         */
-        public String getDescription()
-	{
-            return String.format(DESCRIPTION_FSTRING, getName(),
-                    getColor(), getSize(), getStrength());
-
-        }
-
-        /**
-         * @return formated gelcap string.
-         */
-        public String toString()
-	{
-            return String.format(TOSTRING_FSTRING,
-                    getName(), getColor(), getSize(), getStrength());
+            super(name, strength, size, color, casing, solution, active);
         }
     }
 }

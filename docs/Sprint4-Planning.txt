@@ -1,0 +1,122 @@
+Sprint Planning:
+Due to the fact that sprint 3 did not go as well as planned, 
+we are planning sprint 4 a bit stricter. For sprint 4 we are 
+creating the factory classes, their tests, the store classes, 
+and the store tests. Because Hannah did the bulk of the work for 
+sprint 3, Hannah will become our designated overseer and be 
+tasked with fixing errors and overviewing the rest of our code. 
+Hannah will not be assigned any major tasks outside those to balance 
+the work. Subteam A consists of Ella and Sashe (and Hannah for technical 
+purposes), and subteam B consists of Collin and Tayo. We've split the 
+tasks down the middle, and designed it so the tests for each class are 
+written by the opposite team (to check each others' work). For example, 
+subteam A is writing the GelCapFactory class so subteam B will write the 
+test for that class. Subteam B is writing the Store class, so subteam A will 
+write the tests for the Store, and so on. We also plan to meet Thursday, 
+March 30th to look over the entire project together. The project should 
+be completely done by Thursday, and we will double check again Monday before 
+the due date to ensure everything is still the same. 
+
+Sprint Backlog:
+> Create the GelCapFactory class
+> Create tests for GelCapFactory
+> Create the Adult and Child factory classes
+> Create tests for the Adult and Child factories
+> Create the Store
+> Create tests for the store
+
+Subteam A: Ella, Hannah, Sashe
+Subteam B: Collin, Tayo
+
+Subteam A backlog tasks:
+> Create the GelCapFactory class
+> Create tests for the Adult and Child factories
+> Create tests for the store
+
+Subteam B backlog tasks:
+> Create the Adult and Child factory classes
+> Create tests for GelCapFactory
+> Create the Store
+
+
+
+-----------------------------------------------------------------------------------
+END OF SPRINT
+
+Sprint Review:
+(Discuss your product at this point. Does it work? Are you happy with the code you have created?)
+
+Sprint Retrospective:
+	 What went well?
+         What could have gone better?
+         What will we try next?
+         What Questions do we have?
+
+Ella:
+	 What went well?
+This sprint went extremely well, we all put in the work and worked together really well. We even had 2 meetings!
+         What could have gone better?
+I think this sprint went very well. What could go better in the future is to keep it up!
+         What will we try next?
+Keep up the good work, keep having consistent meetings (Thursday seems to work for everyone) and double/triple check everything.
+         What Questions do we have?
+I'm not sure I have any currently that haven't already been answered. 
+
+Hannah:
+	     What went well?
+            We planned our sprint before the sprint week so everything went smoothly. 
+            Everyone worked on their parts and worked really well together.
+         What could have gone better?
+            Triple check instructions with other members to make sure we understand the instructions.
+         What will we try next?
+            Defiently as allways meet more outside of class but other then that nothing much!
+         What Questions do we have?
+             How to make sure members triple check their code before merging/pushing onto the repo.
+
+Tayo:
+	 What went well?
+        we planned our sprint before the sprint week which was really good! We divided up the work and got majority of the sprint done early in the weak and had time to check over each others work.
+    What could have gone better?
+         One thing that could have better is that I should have check over my branch before making a pull request. I made some simple mistakes that could have been caught if I had looked a bit harder
+    What will we try next?
+        We probably make a point to check with others on our team before making a pull request for the other team to review.
+    What Questions do we have?
+        How can we keep ourselves accountable for making sure our code works before making others review it?
+
+Sashe:
+	 What went well?
+		We better planned out and gave ourselves responsibilities that we were able to finish at our goal date.
+         What could have gone better?
+		We had difficulty interpreting some parts of the instructions, which led to some misunderstandings and unbalanced work being divided.
+         What will we try next?
+		Read the entirety of the instructions together to make sure we are clear on what needs to be done before planning.
+         What Questions do we have? What are some ways we can better communicate and plan as a group to avoid misunderstandings or miscommunications?
+
+Collin:
+	What went well?
+        I think what went really well in this sprint is the creation of 
+        the GelCapFactoryTest class. This was a really huge class but 
+        something that I did really well. Another thing that went well was 
+        how my team was willing to help me when I was woking on it closer 
+        to the end. I felt well supported the entire time. I also took the 
+        initiative to get most of it done early knowing I would spend awhile 
+        bugchecking and took the initiative to talk to the professor. 
+    What could have gone better?
+        One thing I could have done differently and better was when I went 
+        into the other classes and fixed the print statements. I should have 
+        checked with the creators of this class beforehand to let them know 
+        what I was doing. In the end it wasn't a problem but communication 
+        is key and I need to focus more on that. Secondly, I strggled with 
+        the produceDreamly() and produceAcheAway() tests because they were 
+        more complex but also the instrctions were unclear.
+    What will we try next?
+        Maybe assigning a group leader who will work but also oversee the 
+        programming of everyone else. It would be good to make sure all of 
+        us stay organized and keep up with eachother. Developing a test class 
+        is a little harder without the java class being tested not finished 
+        so monitoring that and making sure the base classes are being worked 
+        on efficiently is important. 
+    What Questions do we have?
+        How can we prioritize communication more and releve some of the 
+        frustrations during developement? Should we find a different platform 
+        to communicate on other than Discord?

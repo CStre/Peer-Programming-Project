@@ -1,16 +1,19 @@
 /**
+ *   SoftGel Project Part 2
+ * 
  * Title:           GelCap
  * Files:           GelCap.java
  * Semester:        Spring 2023
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
- * 
- * @author:         Collin Streitman, 
- *                  Ella Fulton, 
+ *
+ * @author          Collin Streitman,
+ *                  Hannah Boulet,
  *                  Sashe Nikolov
- * 
+ *
  * Group Name:      SlayFam, Subteam B
- * @version:        2/22/2023
+ * Sprint:          2
+ * @version         4/02/2023
  */
 
 package pills;
@@ -25,65 +28,69 @@ public abstract class GelCap
     protected String active;
 
     /**
-     * This is the class constructor for the GelCap class. It is just setting 
-     * the protected variables. It then called the manifacture method that 
-     * returns two strings telling the user manufacturing has started 
+     * This is the class constructor for the GelCap class. It is just setting
+     * the protected variables. It then called the manifacture method that
+     * returns two strings telling the user manufacturing has started
      * and finished.
-     * 
+     *
      * @param name
      * @param strength
      * @param size
      * @param color
+     * @param casing
+     * @param solution
+     * @param active
      */
-    public GelCap(String name, double strength, double size, String color)
+    public GelCap(String name, double strength, double size, String color, String casing, 
+        String solution, String active)
     {
         this.name = name;
         this.strength = strength;
         this.size = size;
         this.color = color;
-
-        manufacture();
-
+        this.casing = casing;
+        this.solution = solution;
+        this.active = active;
     }
 
     /**
      * This is the toString() that currently returns a formatted string with
      * the strength of the medication at two decimal places and the name of
      * the medication.
-     * 
+     *
      * @return String
      */
     public String toString()
     {
         String s = String.format("%.2f mg ", getStrength());
-        return s + getName() + "Pill";
+        return "GelCap { name: " + getName()
+            + ", color: " + getColor()
+            + ", size: " + getSize()
+            + ", strength: " + getStrength() + " }";
     }
 
-     /**
+    /**
      * This is the description() that currently returns a formatted string
-     * including the name of the medication,the strength and size formatted to 
+     * including the name of the medication,the strength and size formatted to
      * two decimal places, the color, the casing, the solution, and the active
      * ingredients.
-     * 
+     *
      * @return String
      */
     public String description()
     {
-        String str = String.format("%.2f", getStrength());
-        String siz = String.format("%.2f", getSize());
+        String str = String.format("%.1f", getStrength());
+        String siz = String.format("%.1f", getSize());
 
-        return getName() + " Pill"
-            + "\n\tStrength: " + str 
-            + "\n\tSize: " + siz 
-            + "\n\tColor: " + getColor()
-            + "\n\tCasing: " + getCasing()
-            + "\n\tSolution: " + getSolution()
-            + "\n\tActive: " + getActive();
+        return getName() + " pill"
+            + ", color: " + getColor()
+            + ", size: " + siz
+            + ", strength: " + str;
     }
 
-     /**
+    /**
      * This is the getter for name.
-     *  
+     * 
      * @return String name
      */
     public String getName()
@@ -93,7 +100,7 @@ public abstract class GelCap
 
     /**
      * This is the getter for strength.
-     * 
+     *
      * @return double strength
      */
     public double getStrength()
@@ -103,7 +110,7 @@ public abstract class GelCap
 
     /**
      * This is the getter for size.
-     * 
+     *
      * @return double size
      */
     public double getSize()
@@ -111,9 +118,9 @@ public abstract class GelCap
         return size;
     }
 
-     /**
+    /**
      * This is the getter for color.
-     * 
+     *
      * @return String color
      */
     public String getColor()
@@ -121,9 +128,9 @@ public abstract class GelCap
         return color;
     }
 
-     /**
+    /**
      * This is the getter for casting.
-     * 
+     *
      * @return String casting
      */
     public String getCasing()
@@ -131,9 +138,9 @@ public abstract class GelCap
         return casing;
     }
 
-     /**
+    /**
      * This is the getter for solution.
-     * 
+     *
      * @return String solution
      */
     public String getSolution()
@@ -141,45 +148,13 @@ public abstract class GelCap
         return solution;
     }
 
-     /**
+    /**
      * This is the getter for active.
-     * 
+     *
      * @return String active
      */
     public String getActive()
     {
         return active;
     }
-
-     /**
-     * This is the manufacture() that currently prints a string letting the
-     * user know the method was called and then runs the addCasting(), 
-     * addSolution(), and addActive() before printing another statement letting
-     * the user know the method is done. 
-     * 
-     * @return 
-     */
-    protected void manufacture()
-    {
-        System.out.print("Manufacturing...\n");
-        addCasing();
-        addSolution();
-        addActive();
-        System.out.print("...completed manufacturing\n");
-    }
-
-    /**
-     * This is a protected abstract method called casing.
-     */
-    protected abstract void addCasing();
-
-    /**
-     * This is a protected abstract method called solution.
-     */
-    protected abstract void addSolution();
-
-    /**
-     * This is a protected abstract method called active.
-     */
-    protected abstract void addActive();
 }

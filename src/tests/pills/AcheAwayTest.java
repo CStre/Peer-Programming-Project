@@ -1,27 +1,28 @@
-package pills;
 /**
+ *  SoftGel Project Part 2
+ * 
  * Title:           AcheAwayTest
  * Files:           AcheAwayTest.java
  * Semester:        Spring 2023
  * Course:          CS_3667
- * Professor:       Mx.Sapphire
+ * Professor:       Mx. Sapphire
  * 
- * @author:         Sashe Nikolov,
- *                  Ella Fulton,
- *                  Collin Streitman
- *
+ * @author          Hannah Boulet, 
+ *                  Collin Streitman, 
+ *                  Sashe Nikolov
+ * 
  * Group Name:      SlayFam, Subteam B
- * @version:        2/26/2023
+ * Sprint:          2
+ * @version         4/02/2023
  */
+
+package pills;
 
 // imports
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 public class AcheAwayTest
 {
@@ -34,114 +35,90 @@ public class AcheAwayTest
     public static final String TEST_SOL = "saline";
     public static final String TEST_ACT = "acetaminophen";
 
-    // formatting string
-    private static final String MANU_FSTRING = "Manufacturing...\n"
-            + "Adding %s casing\nAdding %s solution\n"
-            + "Adding %s active\n...completed manufacturing\n";
+    // adult variables
+    public static final double ADULT_STRENGTH = 825.00;
+    public static final double ADULT_SIZE = 8.50;
+    public static final String ADULT_COLOR = "white";
 
-    private static AcheAway acheA;
-    private PrintStream oldOut;
-    private ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    public static final double CHILD_STRENGTH = 415.00;
+    public static final double CHILD_SIZE = 3.25;
+    public static final String CHILD_COLOR = "cyan";
 
-    /**
-     * creating test objects.
-     */
+    private static AcheAwayMock mock;
+    private static ChildAcheAway child;
+    private static AdultAcheAway adult;
+
     @BeforeEach
     public void setup()
     {
-        this.oldOut = System.out;
-        acheA = new AcheAway(TEST_STR, TEST_SIZE, TEST_COLOR);
-        System.setOut(new PrintStream(baos));
+        mock = new AcheAwayMock(TEST_STR, TEST_SIZE, TEST_COLOR, TEST_CASE, TEST_SOL, TEST_ACT);
+        child = new ChildAcheAway(TEST_CASE, TEST_SOL, TEST_ACT);
+        adult = new AdultAcheAway(TEST_CASE, TEST_SOL, TEST_ACT);
     }
 
-    @AfterEach
-    public void afterEach()
-    {
-        System.setOut(System.out);
-        System.setOut(oldOut);
-    }
-
-    /**
-     * tests assert equals with name getter.
-     */
     @Test
     public void testName()
     {
-        assertEquals(CORRECT_NAME, acheA.getName());
+        assertEquals(CORRECT_NAME, mock.getName());
+        assertEquals(CORRECT_NAME, child.getName());
+        assertEquals(CORRECT_NAME, adult.getName());
     }
 
-    /**
-     * tests assert equals with strength getter.
-     */
     @Test
     public void testStrength()
     {
-        assertEquals(TEST_STR, acheA.getStrength());
+        assertEquals(TEST_STR, mock.getStrength());
+        assertEquals(CHILD_STRENGTH, child.getStrength());
+        assertEquals(ADULT_STRENGTH, adult.getStrength());
     }
 
-    /**
-     * tests assert equals with size getter.
-     */
     @Test
     public void testSize()
     {
-        assertEquals(TEST_SIZE, acheA.getSize());
+        assertEquals(TEST_SIZE, mock.getSize());
+        assertEquals(CHILD_SIZE, child.getSize());
+        assertEquals(ADULT_SIZE, adult.getSize());
     }
 
-    /**
-     * tests assert equals with color getter.
-     */
     @Test
     public void testColor()
     {
-        assertEquals(TEST_COLOR, acheA.getColor());
+        assertEquals(TEST_COLOR, mock.getColor());
+        assertEquals(CHILD_COLOR, child.getColor());
+        assertEquals(ADULT_COLOR, adult.getColor());
     }
 
-    /**
-     * tests assert equals with casing getter.
-     */
     @Test
     public void testCasing()
     {
-        assertEquals(TEST_CASE, acheA.getCasing());
+        assertEquals(TEST_CASE, mock.getCasing());
+        assertEquals(TEST_CASE, child.getCasing());
+        assertEquals(TEST_CASE, adult.getCasing());
     }
 
-    /**
-     * tests assert equals with solution getter.
-     */
     @Test
     public void testSolution()
     {
-        assertEquals(TEST_SOL, acheA.getSolution());
+        assertEquals(TEST_SOL, mock.getSolution());
+        assertEquals(TEST_SOL, child.getSolution());
+        assertEquals(TEST_SOL, adult.getSolution());
     }
 
-    /**
-     * tests assert equals with active getter.
-     */
     @Test
-    public static void testActive()
+    public void testActive()
     {
-        assertEquals(TEST_ACT, acheA.getActive());
+        assertEquals(TEST_ACT, mock.getActive());
+        assertEquals(TEST_ACT, child.getActive());
+        assertEquals(TEST_ACT, adult.getActive());
     }
 
-    /**
-     * tests assert equals with manufacture process.
-     */
-    @Test
-    public void testManufactureProcess()
+    private class AcheAwayMock extends AcheAway
     {
-        acheA.manufacture();
-        String expectedOut = String.format(MANU_FSTRING,
-                TEST_CASE, TEST_SOL, TEST_ACT);
-        assertEquals(expectedOut, getOutput());
+        public AcheAwayMock(double strength, double size, String color, String casing, 
+            String solution, String active) 
+        {
+            super(strength, size, color, casing, solution, active);
+        }
 
-    }
-
-    /**
-     * @return output string with format fixed using trim.
-     */
-    private String getOutput()
-    {
-        return baos.toString().trim() + "\n";
     }
 }

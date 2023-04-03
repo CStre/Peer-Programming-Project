@@ -1,35 +1,93 @@
+package client; 
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import pills.GelCap;
+import pills.SoftGelPillStore;
+
 /**
- * Title:           Demo
- * Files:           Demo.java
- * Semester:        Spring 2023
- * Course:          CS_3667
- * Professor:       Mx.Sapphire
+ * Demo class that provides an interface to use the SoftGelPillStore.
  * 
- * @author:         Sashe Nikolov
- * 
- * Group Name:      SlayFam
- * @version:        2/27/2023
+ * @author Willow Sapphire
+ * @version 02/24/2023
  */
-package client;
-
-import pills.AcheAway;
-import pills.Dreamly;
-
 public class Demo 
 {
-	/**
-	 * This is the main method for the entire project. 
-	 * With this method, we create an AcheAway object and
-	 * Dreamly object. We are also calling the description
-	 * method from the parent class for both objects to make 
-	 * sure they work. 
-	 * @param args
-	 */
+    /**
+     * A simple interface to interact with the SoftGelPillStore.
+     * 
+     * @param args unused
+     */
     public static void main(String[] args) 
     {
-        AcheAway acheAway = new AcheAway(2.0, 5.0, "yellow");
-        System.out.println(acheAway.description());
-        Dreamly dreamly = new Dreamly(1.0, 7.0, "white");
-        System.out.println(dreamly.description());
+        Scanner input = new Scanner(System.in);
+        SoftGelPillStore store = new SoftGelPillStore(input, System.out);
+        ArrayList<GelCap[]> orders = new ArrayList<>();
+        System.out.println("Log In: ");
+        store.logIn();
+        boolean exit = false;
+        while (!exit) 
+        {
+            String choice = "";
+            while (!validSelection(choice)) 
+            {
+                System.out.println("Choose from the following menu");
+                System.out.println("1) Order");
+                System.out.println("2) Checkout");
+                System.out.println("3) Logout");
+                choice = input.nextLine();
+                if (!validSelection(choice)) 
+                {
+                    System.out.println("Please select an option from the menu");
+                }
+            }
+            switch (Integer.parseInt(choice)) 
+            {
+                case 1:
+                    store.order();
+                    break;
+                case 2: 
+                    GelCap[] order = store.checkOut();
+                    if (order != null) 
+                    {
+                        orders.add(order);
+                    }
+                    break;
+                case 3:
+                    exit = store.logOut();
+                    break;
+                default:
+            }
+        }
+        System.out.println("Here is what you ordered:");
+        int orderNum = 0;
+        for (GelCap[] order : orders) 
+        {
+            System.out.printf("Order Number %d\n", ++orderNum);
+            for (GelCap g : order) 
+            {
+                System.out.printf("\t%s\n", g);
+            }
+            System.out.println();
+        }
+        input.close();
+    }
+
+    /**
+     * Helper method that checks if use input is a 1, 2, or 3.
+     * @param selection the string entered by the user
+     * @return true if the selection was valid, false otherwise
+     */
+    private static boolean validSelection(String selection) 
+    {
+        try 
+        {
+            int choice = Integer.parseInt(selection);
+            return choice == 1 || choice == 2 || choice == 3;
+        } 
+        catch (NumberFormatException e) 
+        {
+            return false;
+        }
     }
 }

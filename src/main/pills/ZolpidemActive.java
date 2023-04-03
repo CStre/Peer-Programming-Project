@@ -1,0 +1,30 @@
+/**
+ *   SoftGel Project Part 2
+ * 
+ * Title:           ZolpidemActive
+ * Files:           ZolpidemActive.java
+ * Semester:        Spring 2023
+ * Course:          CS_3667
+ * Professor:       Mx. Sapphire
+ * 
+ * @author          Hannah Boulet,
+ *                  Ella Fulton,
+ *                  Sashe Nikolov
+ * 
+ * Group Name:      SlayFam, Subteam B
+ * Sprint:          3
+ * @version         4/02/2023
+ */
+
+package pills;
+
+public class ZolpidemActive implements ActiveGenerator
+{
+    public String generateActive(double amount)
+    {
+        System.out.format("Opening secure storage area ... \n"
+                + "Carefully extracting %.2fmg of zolpidem\n"
+                + "Returning %.2fmg of zolpidem\n", amount, amount);
+        return "zolpidem";
+    }
+}

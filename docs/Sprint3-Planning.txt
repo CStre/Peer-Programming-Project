@@ -1,0 +1,92 @@
+Sprint Planning:
+The plan for sprint 3 is to get all of the generator related classes, the GelCapRecipes class, and the tests for the GelCapRecipes class finished. We plan to set up a time to meet outside of class and also work with our respective teams to work on these classes through the week. Spring break has set us back just a little.
+
+Sprint Backlog:
+> Create the CasingGenerator interface and the two types of Casing Generators
+> Create tests for the two types of casing generators
+> Create the SolutionGenerator interface and the two types of Solution Generators 
+> Create tests for the two types of solution generators
+> Create the ActiveGenerator interface and the two types of Active Generators
+> Create tests for the two types of active generators
+> Create the GelCapRecipes class
+> Create tests for GelCapRecipes
+
+Subteam A: Ella, Hannah, Sashe
+Subteam B: Collin, Tayo
+
+Subteam A backlog tasks:
+> Create the CasingGenerator interface and the two types of Casing Generators
+> Create tests for the two types of casing generators
+> Create the SolutionGenerator interface and the two types of Solution Generators 
+> Create tests for the two types of solution generators
+> Create the ActiveGenerator interface and the two types of Active Generators
+
+Subteam B backlog tasks:
+> Create tests for the two types of active generators
+> Create the GelCapRecipes class
+> Create tests for GelCapRecipes
+
+
+
+-----------------------------------------------------------------------------------
+END OF SPRINT
+
+Sprint Review:
+(Discuss your product at this point. Does it work? Are you happy with the code you have created?)
+
+Sprint Retrospective:
+	What went well?
+    What could have gone better?
+    What will we try next?
+    What Questions do we have?
+
+Ella:
+	 What went well?
+Not that much, timing and planning were not our strength for this sprint, what went well was that at least Hannah picked up everyone's slack this week.
+         What could have gone better?
+Meeting before each sprint, specifically this sprint (3), we met before sprint 2 and it was great, I believe that was our main issue this time. Everyone was busy, but it's not really an excuse.
+         What will we try next?
+We need to meet as a group outside of class before each sprint and plan our next steps on a white board, with names, dates, and times. We need to be more specific and not leave things in the air. The communication needs to be better.
+         What Questions do we have?
+How can we fix this issue, and what can we do to make sure that the whole group participates in the future?
+
+Collin:
+	What went well?
+        Some things I feel like went well such as our overall effort toward getting work done well before the due date. Hannah did also end up picking up the extra work to do the bulk of the work. I also ended up working on and completing the bulk of the recipe class with Hannah following up fixing errors. 
+    What could have gone better?
+        Having a meeting before the sprint is definetly something we should have done. Meeting in the earlier sprints went super well and and not meeting this time around was really defining for the rest of the sprint 3.
+    What will we try next?
+        Meeting up outside of the class in the library and laying out specific roles again is extremely important and drawing charts, sending individual lists of items to complete will overall make much more sense for everyone and will be harder to mess up.
+    What Questions do we have?
+        I have no questions right now, I am just hoping we are able to fix these issues and knowing what went wrong is enough to make a right in the future.
+
+Hannah:
+	What went well?
+        Finishing up the generators and their tests went super fast so I did them myself forgetting that was our sprint plan for this sprint. 
+    What could have gone better?
+        Having meetings and planning this sprint with more work to do and making sure everyone completes 
+        their own tasks on time and on the day they said they would have it done by.
+    What will we try next?
+        Meeting in person more and having more meetings outside of class. 
+        Making sure we stay on top of eachother with the work and make sure everyone gets their stuff in on time by our sprint deadline.
+    What Questions do we have?
+    Why do group members not communicate? It seems like we are still having a problem with that?
+
+Tayo:
+	What went well?
+        The items on the backlog for this sprint got done pretty fast thanks to Hannah. This allowed us to meet and plan for the next sprint much earlier than we typically have been doing.
+    What could have gone better?
+        We did not split up the work at all and Hannah ended up doing most of the work. I think a major reason why this happened was because when we came back from spring break we did not immediately start planning for the this sprint. Due to both this and the fact that mahority of us focused our energies earlier this week towards studying for a midterm, we did not properly address this sprint until the week of the sprint was almost over and mistakes were already made. Though these things happen, they should not be excuses for our work ethic. We should have instead planned ahead to figure out what we are going to do knowing that this week may be difficult considering the things that are going on.
+    What will we try next?
+         The biggest thing to do is to make sure we are planning our sprints before the week of the sprint starts so that our sprint planning is not delayed or interfered with by the obstacles that may come up during the sprint itself. The next thing to do is to make sure that before the sprint is over, we meet back up to check in with each other and hold each other accountable for the work assigned to their team.
+    What Questions do we have?
+        At the current moment, I don't really have questions. I think we have better idea of where we need to improve.
+
+Sashe:
+	What went well? I do not think anything went well other than Hannah's effort on this Sprint. There was a little work done on editing file and checking old work (for instance, I worked a bit on fixing up some old tests), but there was no actual progress made on the current sprint that did not come from Hannah.
+    What could have gone better? There is still a lack of better communication and planning. Spring Break got in our way, but that is not an excuse; we should have discussed what we were going to work on immediately after the break, but due to most of us being busy (again, not an excuse...) we did not get to do this. It seems we are still struggling with better organizing and committing to these projects as a team rather than individually.
+
+    What will we try next? Better prepping for sprints BEFORE we start working on them, and making sure have more solid plans on our to-do list and laying out proper due dates. The way we divided up the work was unbalanced and led to Hannah taking over this sprint, which means we need to look over the entire instruction document before splitting up work. We also need to do more frequent check-ins for our progress. And last of all: we need to avoid slacking off. It's hard to come back from a break and get back right to work, but this was unacceptable.  
+
+    What Questions do we have? I do not have any for now; I and others have understood where we went wrong and hopefully, we can learn from this and do better for our future sprints.
+
