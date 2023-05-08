@@ -1,0 +1,120 @@
+Sprint 7 Planning:
+For this sprint we planned to work on the adult and child factories, polish up the
+inspector tests, and work on the pill store, store tests, and demo class. The Demo 
+is probably by far the hardest class we've had to write, so we assigned it to 3 people 
+from different sub teams, so that we could see some real collarboration across our
+team as a whole. Hannah, Ella and Sashe are assigned the Demo. We also had to make
+some changed towards the end of the sprint and reassign some tasks because some of
+our group members were very busy this week. This sprint is probably the most important
+one, so we met on Thursday April 27th and Friday April 28th to work on this together.
+
+Sprint 7 Backlog:
+> Update AdultGelCapFactory and ChildGelCapFactory
+> Update AdultGelCapFactory and ChildGelCapFactory Tests
+> Create Inspector and InspectorConsistency tests
+> Create FailureInspector and StrengthInspector tests
+> Update SoftGelPillStore
+> Update SoftGelPillStore tests
+> Demo
+
+Overseer: Hannah Boulet
+Subteam 1: Sashe Nikolov & Tayo Olofintuyi
+Subteam 2: Ella Fulton & Collin Streitman
+
+Overseer task:
+> Update AdultGelCapFactory and ChildGelCapFactory
+
+Subteam 1 backlog tasks:
+> Create Inspector and InspectorConsistency tests
+> Update SoftGelPillStore
+
+Subteam 2 backlog tasks:
+> Update AdultGelCapFactory and ChildGelCapFactory Tests
+> Create FailureInspector and StrengthInspector tests
+> Update SoftGelPillStore tests
+
+*** The Demo class is assigned to Hannah, Sashe, and Ella who each come from a different team (+ overseer)
+because we felt that it would be important to collaborate on this one.*** 
+
+--------------------------------------------------------------------------------------------
+
+END OF SPRINT:
+
+Sprint Review:
+
+Sprint Retrospective:
+     What went well?
+     What could have gone better?
+     What will we try next?
+     What Questions do we have?
+
+Ella:
+     What went well?
+        -> The best part of this sprint was the demo and store. We had 3 people from 3
+            groups working on the demo, Hannah, Sashe and I. It actually went so perfectly
+            and the demo ended up amazing (at least in my opinion). Hannah did the bulk of
+            the work for it because they have good initiative, and Sashe put a lot of work
+            into debugging the demo and fixing the SoftGelPillStore so that the demo would
+            run smooth. I went in and added some style changes and fixed several testing
+            errors that cropped up after working on the demo and store. It was a team effort, 
+            especially seeing that we did most of the work for it during the weekend when we
+            were fairly busy.
+     What could have gone better?
+        -> 100% communication
+     What will we try next?
+        -> Nothing, because we're finally done, yay!
+     What Questions do we have?
+        -> I don't have any questions currently, other than wanting to know if we're going 
+            to get a good grade. 
+
+Hannah:
+     What went well?
+          -> I really enjoyed making the bulk of the demo. 
+          We had 3 people all contribute to the demo, Sashe,
+          Ella and I all worked on it together. The demo came together really well in the end.
+          It was all a team effort fixing other bugs that were in the softgellpills, and in the tests.
+     What could have gone better?
+          -> Communication.
+     What will we try next?
+          -> If we ever have a project that is similar to thing make sure our group members don't mute the chat.
+     What Questions do we have?
+          -> I do not have any questions.
+Tayo:
+     What went well?
+          -> Ultimately creativity with the Demo was a big part of this sprint and it was really cool discussing ideas about it.
+     What could have gone better?
+          -> Honestly I could have done better with communication and getting my tasks done earlier so that issues that arise can be solved earlier, which would have saved a lot of stress for the whole group. 
+     What will we try next?
+          -> If we were to do this project again I think having a mid sprint meet to talk about what still needs to be done and discuss any blockers that may prevent us from working, both related and unrelated to the project.
+     What Questions do we have?
+          -> I don't really have any questions.
+
+Sashe:
+     What went well? 
+     -> Working on the Store and Demo went pretty smoothly despite there being some challenges. I got some assistance
+     on the Store with our overseer (Hannah), and the Demo came together really well. Hannah and Ella did a great job on it!
+     What could have gone better? Communication. 
+     -> It was difficult to get others to respond.
+     What will we try next?
+     -> There is no next part, but I think this project has taught us a lot about team coding.
+     What Questions do we have?
+     -> None
+
+Collin:
+     What went well?
+     -> The creativity and the clean up aspects were great. I went through and changed 
+     and updated all of the classes headings as well as added comments and continued 
+     formatting throughout to make sure all classes followed the same header formatting. 
+     What could have gone better?
+     -> I think while the group does a great job at supporting one another, part of this 
+     sprint was filled with spontaneity and with the loose planning since it was our last 
+     sprint, we had much more work left to do on the weekend. Because I was 
+     out of town over the weekend I was not able to get to support the group the way I would 
+     have if I was in Boone. We all put in vast effort throughout this entire project and 
+     while the ending is important, I think the work I have put in cannot be discounted and 
+     the effort I showed while I was available during this sprint shows my continued dedication.
+     What will we try next?
+     -> Nothing, since the project is completed. 
+     What Questions do we have?
+     -> No questions from me.
+

@@ -1,5 +1,15 @@
+package pills;
+
+//imports
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 /**
- *    Project SoftGel Part 2
+ *    Project SoftGel Part 3
  *
  * Title:           AdultGelCapFactoryTest
  * Files:           AdultGelCapFactoryTest.java
@@ -16,18 +26,8 @@
  * @version         4/02/2023
  */
 
-package pills;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
 public class AdultGelCapFactoryTest
 {
-
     // test variables
     public static final double TEST_ADULTDSTR = 5.20;
     public static final double TEST_ADULTASTR = 825.00;
@@ -42,7 +42,7 @@ public class AdultGelCapFactoryTest
     @BeforeEach
     public void setUp() 
     {
-        this.agc = new AdultGelCapFactory();
+        this.agc = AdultGelCapFactory.getInstance();
         this.oldOut = System.out;
         this.baos = new ByteArrayOutputStream();
         System.setOut(new PrintStream(baos));

@@ -1,5 +1,7 @@
+package pills;
+
 /**
- *    Project SoftGel Part2
+ *    Project SoftGel Part 3
  * 
  * Title:           AdultDreamly
  * Files:           AdultDreamly.java
@@ -7,15 +9,12 @@
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
  * 
- * @author:         Ella Fulton,
- *                  Tayo Olofintuyi
+ * @author          Collin Streitman
  * 
- * Group Name:      SlayFam, Subteam A
- * Sprint:          2
- * @version:        4/02/2023
+ * Group Name:      SlayFam, Subteam 2
+ * Sprint:          5
+ * @version         4/10/2023
  */
-
-package pills;
 
 public class AdultDreamly extends Dreamly
 {
@@ -23,10 +22,26 @@ public class AdultDreamly extends Dreamly
     public final static double SIZE = 12.24;
     public final static String COLOR = "tan";
 
-
+    /**
+     * Constructor for the AdultDreamly class.
+     *
+     * @param casing Dreamly casing.
+     * @param solution Dreamly solution.
+     * @param active Dreamly active.
+     */ 
     public AdultDreamly(String casing, String solution, String active)
     {
         super(STRENGTH, SIZE, COLOR, casing, solution, active);
+    }
+
+    /**
+     * Accept method using the inspector.
+     *
+     * @param insp The inspector object.
+     */ 
+    public void accept(Inspector insp)
+    {
+        insp.inspect(this);        
     }
 }
 

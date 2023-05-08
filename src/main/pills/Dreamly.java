@@ -1,5 +1,7 @@
+package pills;
+
 /**
- *  SoftGel Project Part 2
+ *    SoftGel Project Part 3
  * 
  * Title:           Dreamly
  * Files:           Dreamly.java
@@ -7,18 +9,19 @@
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
  * 
- * @author          Ella Fulton,
- *                  Tayo Olofintuyi
+ * @author          Sashe Nikolov
+ * 		            Collin Streitman
+ *       
  * 
- * Group Name:      SlayFam, Subteam A
- * Sprint:          2
- * @version         4/02/2023
+ * Group Name:      SlayFam, Subteam B
+ * Sprint:          5
+ * @version         4/10/2023
  */
-
-package pills;
 
 public abstract class Dreamly extends GelCap
 {
+
+    public static final Dreamly NULL = null;
     /**
      * Constructor for the dreamly class.
      * @param strength

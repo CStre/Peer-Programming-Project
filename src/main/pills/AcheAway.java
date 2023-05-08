@@ -1,5 +1,7 @@
+package pills;
+
 /**
- *   SoftGel Project Part 2
+ *   SoftGel Project Part 3
  * 
  * Title:           AcheAway
  * Files:           AcheAway.java
@@ -7,18 +9,19 @@
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
  * 
- * @author          Ella Fulton,
- *                  Tayo Olofintuyi
+ * @author          Sashe Nikolov
+ *                  
  * 
- * Group Name:      SlayFam, Subteam A
- * Sprint:          2
- * @version         4/02/2023
+ * Group Name:      SlayFam, Subteam 2
+ * Sprint:          5
+ * @version         4/06/2023
  */
-
-package pills;
 
 public abstract class AcheAway extends GelCap
 {
+    // AcheAway null object
+    public static final AcheAway NULL = null;
+
     /**
      * Constructor for the AcheAway class.
      * @param strength

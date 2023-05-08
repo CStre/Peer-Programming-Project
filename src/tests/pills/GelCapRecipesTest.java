@@ -1,5 +1,10 @@
+package pills;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 /**
- *    Project SoftGel Part 2
+ *    Project SoftGel Part 3
  * 
  * Title:           GelCapRecipesTest
  * Files:           GelCapRecipesTest.java
@@ -7,64 +12,54 @@
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
  * 
- * @author:         Hannah Boulet,
- *                  Ella Fulton,
- *                  Sashe Nikolov 
+ * @author          Hannah Boulet,
+ *                  Sashe Nikolov, 
+ *                  Ella Fulton
  *  
  * 
- * Group Name:      SlayFam, Subteam A
- * Sprint:          4
- * @version:         4/02/2023
+ * Group Name:      SlayFam, Subteam 2
+ * Sprint:          5
+ * @version         4/21/2023
  */
-
-package pills;
-
-// imports
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GelCapRecipesTest
 {
     /**
-     * General test to see if each dreamly
-     * and acheaway return their proper casing objects.
+     * Testing that GelCapRecipes returns a CasingGenerator
+     * when called with "dreamly" and "acheAway". 
      */
     @Test
     public void testCasings()
     {
-		// test for Dreamly
         assertTrue(GelCapRecipes.CASINGS.get("dreamly") 
-                instanceof GelatinCasing);
-		// test for AcheAway
+                instanceof CasingGenerator);
         assertTrue(GelCapRecipes.CASINGS.get("acheAway") 
-                instanceof PlasticizerCasing);
+                instanceof CasingGenerator);
     }
+
     /**
-     * General test to see if each dreamly 
-     * and acheaway return their proper solution objects.
+     * Testing that GelCapRecipes returns a SolutionGenerator
+     * when called with "dreamly" and "acheAway". 
      */
     @Test
     public void testSolutions() 
     {
-		// test for Dreamly
-        assertTrue(GelCapRecipes.SOLUTIONS.get("dreamly") 
-                instanceof SalineSolution);
-		// test for AcheAway
+        assertTrue(GelCapRecipes.SOLUTIONS.get("dreamly")
+                instanceof SolutionGenerator);
         assertTrue(GelCapRecipes.SOLUTIONS.get("acheAway") 
-                instanceof OilSolution);
+                instanceof SolutionGenerator);
     }
+
     /**
-     * General test to see if each dreamly 
-     * and acheaway return their proper actives objects.
+     * Testing that GelCapRecipes returns an ActiveGenerator
+     * when called with "dreamly" and "acheAway". 
      */
     @Test
     public void testActives() 
     {
-		// test for Dreamly
         assertTrue(GelCapRecipes.ACTIVES.get("dreamly") 
-                instanceof AcetaminophenActive);
-		// test for AcheAway
+                instanceof ActiveGenerator);
         assertTrue(GelCapRecipes.ACTIVES.get("acheAway") 
-                instanceof ZolpidemActive);
+                instanceof ActiveGenerator); 
     }
 }

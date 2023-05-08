@@ -1,20 +1,3 @@
-/**
- *    Project SoftGel Part2
- * 
- * Title:           SolutionTest
- * Files:           SolutionTest.java
- * Semester:        Spring 2023
- * Course:          CS_3667
- * Professor:       Mx. Sapphire
- * 
- * @author:         Hannah Boulet,
- *                  Ella Fulton
- *                  
- * Group Name:      SlayFam, Subteam A
- * Sprint:          3
- * @version:        4/02/2023
- */
-
 package pills;
 
 // imports
@@ -24,6 +7,23 @@ import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.ByteArrayOutputStream;			
 import java.io.PrintStream;	
+
+/**
+ *    Project SoftGel Part 3
+ * 
+ * Title:           SolutionTest
+ * Files:           SolutionTest.java
+ * Semester:        Spring 2023
+ * Course:          CS_3667
+ * Professor:       Mx. Sapphire
+ * 
+ * @author          Hannah Boulet,
+ *                  Tayo Olofintuyi
+ *                  
+ * Group Name:      SlayFam, Subteam 1
+ * Sprint:          6
+ * @version         4/17/2023
+ */
 
 public class SolutionTest
 {
@@ -35,11 +35,22 @@ public class SolutionTest
     private ByteArrayOutputStream baos;
     private PrintStream oldout;
 
+    private final int oilSolutionPort = 1096;
+    private final int salineSolutionPort = 1095;
+
     @BeforeEach
-    public void beforeEach()
+    public void beforeEach() 
     {
-        saline = new SalineSolution();
-        oil = new OilSolution();
+        try
+        {
+            saline = new SalineSolution(salineSolutionPort);
+            oil = new OilSolution(oilSolutionPort);
+        }
+        catch (Exception e)
+        {
+
+        }
+
         this.oldout = System.out;
         this.baos = new ByteArrayOutputStream();
         System.setOut(new PrintStream(baos));
@@ -54,13 +65,26 @@ public class SolutionTest
     @Test
     public void testOil()
     {
-        assertEquals(oilreturn, oil.generateSolution());
+        try
+        {
+            assertEquals(oilreturn, oil.generateSolution());
+        }
+        catch (Exception e)
+        {
+
+        }
     }
 
     @Test
     public void testSaline()
     {
-        assertEquals(salineReturn, saline.generateSolution());
-    }
+        try
+        {
+            assertEquals(salineReturn, saline.generateSolution());
+        }
+        catch (Exception e)
+        {
 
+        }
+    }
 }

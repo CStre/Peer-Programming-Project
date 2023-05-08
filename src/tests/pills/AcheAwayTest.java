@@ -1,5 +1,14 @@
+package pills;
+
+// imports
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 /**
- *  SoftGel Project Part 2
+ *  SoftGel Project Part 3
  * 
  * Title:           AcheAwayTest
  * Files:           AcheAwayTest.java
@@ -7,22 +16,12 @@
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
  * 
- * @author          Hannah Boulet, 
- *                  Collin Streitman, 
- *                  Sashe Nikolov
- * 
- * Group Name:      SlayFam, Subteam B
- * Sprint:          2
- * @version         4/02/2023
+ * @author          Collin Streitman 
+ *                  
+ * Group Name:      SlayFam, Subteam 2
+ * Sprint:          5
+ * @version         4/10/2023
  */
-
-package pills;
-
-// imports
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 
 public class AcheAwayTest
 {
@@ -54,6 +53,18 @@ public class AcheAwayTest
         mock = new AcheAwayMock(TEST_STR, TEST_SIZE, TEST_COLOR, TEST_CASE, TEST_SOL, TEST_ACT);
         child = new ChildAcheAway(TEST_CASE, TEST_SOL, TEST_ACT);
         adult = new AdultAcheAway(TEST_CASE, TEST_SOL, TEST_ACT);
+    }
+
+    /**
+     * tests that null constant exists iin AcheAway class.
+     * tests the NullAcheAway class
+     */
+    @Test 
+    public void testNull()
+    {
+        assertNull(AcheAway.NULL);
+        AcheAway girl = new NullAcheAway();
+        assertNotNull(girl);
     }
 
     @Test
@@ -118,6 +129,11 @@ public class AcheAwayTest
             String solution, String active) 
         {
             super(strength, size, color, casing, solution, active);
+        }
+
+        public void accept(Inspector insp)
+        {
+            
         }
 
     }

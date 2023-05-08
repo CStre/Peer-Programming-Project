@@ -1,5 +1,7 @@
+package pills;
+
 /**
- *    Project SoftGel Part2
+ *    Project SoftGel Part 3 
  * 
  * Title:           ChildAcheAway
  * Files:           ChildAcheAway.java
@@ -7,16 +9,15 @@
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
  * 
- * @author:         Collin Streitman,
+ * @author          Collin Streitman,
  *                  Hannah Boulet,
- *                  Sashe Nikolov
+ *                  Sashe Nikolov,
+ *                  Ella Fulton
  * 
- * Group Name:      SlayFam, Subteam B
- * Sprint:          2
- * @version:        4/02/2023
+ * Group Name:      SlayFam, Subteam 2
+ * Sprint:          5
+ * @version         4/02/2023
  */
-
-package pills;
 
 public class ChildAcheAway extends AcheAway
 {
@@ -26,13 +27,21 @@ public class ChildAcheAway extends AcheAway
 
     /**
      * Constructor for the ChildAcheAway class.
-     * @param casing
-     * @param solution
-     * @param active
+     * @param casing Child ache away casing.
+     * @param solution Child ache away solution.
+     * @param active Child ache away active.
      */
     public ChildAcheAway(String casing, String solution, String active)
     {
         super(STRENGTH, SIZE, COLOR, casing, solution, active);
-    }
+    } 
 
+    /**
+     * Accept method using the inspector.
+     * @param insp Inspector object.
+     */
+    public void accept(Inspector insp)
+    {
+        insp.inspect(this);       
+    }
 }

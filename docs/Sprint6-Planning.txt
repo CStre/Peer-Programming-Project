@@ -1,0 +1,114 @@
+Sprint 6 Planning:
+We met on Thursday 4/13 at 12pm to plan for sprint 6. This sprint will be dedicated to the generators and their
+tests, gelcap recipes and recipe tests, creating the inspector tests, and updating the gelcap factory. Sashe is
+our overseer for this sprint, and the subteams are split evenly (2 and 2). We all agreed that having an overseer
+is helpful to the process and keeping things organized. We have also split the teams work so that one team will 
+update a class, and the other will update the corresponding test in order to double check each others' work. Sprint
+6 will be over next Thursday 4/20, and we plan to meet again at 12pm to tie up any loose ends and get started on 
+sprint 7.
+
+Sprint 6 Backlog:
+> Create Inspector Tests
+> Update 6 Generator Classes
+> Update Generator Tests
+> Update GelCapRecipes
+> Update GelCapRecipe Tests
+> Update GelCapFactory 
+> Update GelCapFactory Test
+
+Overseer: Sashe Nikolov
+Subteam 1: Hannah Boulet & Tayo Olofintuyi
+Subteam 2: Collin Streitman & Ella Fulton
+
+Overseer task:
+> Update CasingGenerator, SolutionGenerator, Active Generator
+
+Subteam 1 backlog tasks:
+> Update Generator Tests
+> Update GelCapRecipes
+> Update GelCapFactory Test
+
+Subteam 2 backlog tasks:
+> Create Inspector Tests
+> Update 6 Generator Classes
+> Update GelCapRecipe Tests
+> Update GelCapFactory 
+
+--------------------------------------------------------------------------------------------
+
+END OF SPRINT:
+
+Sprint Review:
+
+Sprint Retrospective:
+     What went well?
+     What could have gone better?
+     What will we try next?
+     What Questions do we have?
+
+Ella:
+     What went well?
+        -> We adapted very well to problems during this sprint, our overseer (Sashe) did a great job
+            helping everyone with anything they got stuck on, and we met to help each other with two
+            of the test classes that had issues. 
+     What could have gone better?
+        -> Persionally, probably putting more effort into java docs. 
+     What will we try next?
+        -> Buffing up my javadocs and maybe going back to make them really well written in other classes. 
+     What Questions do we have?
+        -> None currently!
+
+Hannah:
+     What went well?
+          -> We are super organized with our google doc with each sprint layed out in a checkbox style for the backlogged items. 
+               We keep track of eachother and help eachother when we have questions.
+     What could have gone better?
+          -> improve our javadocs even more!
+     What will we try next?
+          -> I personally will make sure to keep up with checkstyle since I keep forgetting. 
+     What Questions do we have?
+          -> None from me!
+
+Tayo:
+     What went well? 
+        -> We were super organized and had a good time getting our things done. We kept track 
+            with a google doc that we all had access to which made it easier to see what others 
+            were working on and see what was left.
+     What could have gone better? 
+        -> This isn't something that we can prevent but one of our members had a family 
+            emergency which meant that he will not be available during a significant portion 
+            of the project. Luckily he had already done his part of the sprint.
+     What will we try next? 
+        -> We will rearrange the tasks to take the pressure of Collin while still getting 
+            things done. We'll still make to run make check and make test before each pull 
+            request and hold each other accountable to ensure the quality of our work.
+     What Questions do we have? 
+        -> How can we make sure to be flexible in our planning when situations change.
+
+Sashe:
+     What went well? 
+        -> Even though we had a group member leave for this sprint, we were able to adapt pretty 
+            well. We didn't run into any major issues despite having trouble with code.
+     What could have gone better? 
+        -> We noticed some code got switched around and we didn't notice until we ran into some 
+            issues. We should try to check over code more frequently (perhaps have more than just 
+            one person check).
+     What will we try next? 
+        -> Check over merged code more frequently.
+     What Questions do we have? 
+        -> None for now.
+
+Collin:
+      What went well?
+         I was absent for most of this sprint, however, I am grateful of my group and how they 
+            picked up the work during my absence. They worked really well together and kept me updated
+            by continuing the communicate in the Discord chat. 
+      What could have gone better?
+         Make more consistent and correct JavaDocs for this assignment; even though they look great. 
+      What will we try next?
+         We will check over our merged code more frequently and to really take the time to evaluate 
+            each pull request more intensely; but not because there is a problem with our pulling and merging
+            but more because in the real world, pull requests are super important to review more.
+      What Questions do we have?
+         No question for now. 
+

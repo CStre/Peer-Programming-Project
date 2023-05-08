@@ -1,20 +1,3 @@
-/**
- *    Project SoftGel Part 2
- *
- * Title:           ActiveTest
- * Files:           ActiveTest.java
- * Semester:        Spring 2023
- * Course:          CS_3667
- * Professor:       Mx. Sapphire
- * 
- * @author:         Hannah Boulet,
- *                  Ella Fulton
- * 
- * Group Name:      SlayFam, Subteam A
- * Sprint:          3
- * @version:        4/02/2023
- */
-
 package pills;
 
 // imports
@@ -25,21 +8,48 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.ByteArrayOutputStream;			
 import java.io.PrintStream;	
 
-public class ActiveTest
-{
-    private GelatinCasing gel;
-    private PlasticizerCasing plas;
+/**
+ *    Project SoftGel Part 3
+ *
+ * Title:           ActiveTest
+ * Files:           ActiveTest.java
+ * Semester:        Spring 2023
+ * Course:          CS_3667
+ * Professor:       Mx. Sapphire
+ * 
+ * @author          Hannah Boulet,
+ *                  Tayo Olofintuyi
+ * 
+ * Group Name:      SlayFam, Subteam 1
+ * Sprint:          6
+ * @version         4/17/2023
+ */
 
-    private String gelreturn = "gelatin"; 
-    private String plasreturn = "plasticizer";
+public class ActiveTest 
+{
+    private AcetaminophenActive ace;
+    private ZolpidemActive zol;
+
+    private String acereturn = "acetaminophen"; 
+    private String zolreturn = "zolpidem";
     private ByteArrayOutputStream baos;
     private PrintStream oldout;
+
+    private final int zolpidemActivePort = 1093;
+    private final int acetaminophenActivePort = 1094;
 
     @BeforeEach
     public void beforeEach()
     {
-        gel = new GelatinCasing();
-        plas = new PlasticizerCasing();
+        try
+        {
+            ace = new AcetaminophenActive(acetaminophenActivePort);
+            zol = new ZolpidemActive(zolpidemActivePort);
+        }
+        catch (Exception e)
+        {
+
+        }
 
         this.oldout = System.out;
         this.baos = new ByteArrayOutputStream();
@@ -53,15 +63,28 @@ public class ActiveTest
     }
 
     @Test
-    public void testPlasticizer()
+    public void testAcetaminophen()
     {
-        assertEquals(plasreturn, plas.generateCasing());
+        try
+        {
+            assertEquals(acereturn, ace.generateActive(AdultAcheAway.STRENGTH));
+        }
+        catch (Exception e)
+        {
+
+        }
     }
 
     @Test
-    public void testGelatin()
+    public void testZolpidem()
     {
-        assertEquals(gelreturn, gel.generateCasing());
-    }
+        try
+        {
+            assertEquals(zolreturn, zol.generateActive(AdultAcheAway.STRENGTH));
+        }
+        catch (Exception e)
+        {
 
+        }
+    }
 }

@@ -1,23 +1,6 @@
-/**
- *    Project SoftGel Part 2
- * 
- * Title:           SoftGelPillStoreTest
- * Files:           SoftGelPillStoreTest.java
- * Semester:        Spring 2023
- * Course:          CS_3667
- * Professor:       Mx. Sapphire
- *
- * @author          Sashe Nikolov,
- *                  Ella Fulton,
- *                  Hannah Boulet
- *
- * Group Name:      SlayFam, Subteam A
- * Sprint:          4
- * @version         4/02/2023
- **/
-
 package pills;
 
+//imports
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,15 +10,36 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+/**
+ *    Project SoftGel Part 3
+ * 
+ * Title:           SoftGelPillStoreTest
+ * Files:           SoftGelPillStoreTest.java
+ * Semester:        Spring 2023
+ * Course:          CS_3667
+ * Professor:       Mx. Sapphire
+ *
+ * @author          Sashe Nikolov,
+ *                  Hannah Boulet,
+ *                  Tayo Olofintuyi
+ *                  Ella Fulton
+ *
+ * Group Name:      SlayFam, Subteam 2
+ * Sprint:          7
+ * @version         4/29/2023
+ **/
+
 public class SoftGelPillStoreTest 
 {
     public static final int AGE = 20;
+    public static final int CHILDAGE = 5;
     public static final String NAME = "Ella";
     public static final String LOGIN = "Ella\n20";
     public static final String LOGINOUTPUT = "What is your name?  \n\nWhat is your age?  \n";
     public static final String LOGOUTFAIL = "You are not logged in.\n";
     public static final String LOGOUTFAIL2 = "You have an order that you have not checked out. "
-        + "Are you sure you want to log out? (y/N)\n";
+        + "Are you sure you want to log out? (Y/N)\n"
+        + "You have chosen to stay logged in.\n";
     public static final String ORDERFAIL = "You must log in before you can order.\n\n";
     public static final String ORDER = String.format("\nHello, %s. What would you like to order?"
             + "\nOptions:\n1) Dreamly\n2) AcheAway\n3) Cancel\n\n", NAME);
@@ -43,12 +47,21 @@ public class SoftGelPillStoreTest
         + "checkout\n\n";
     public static final String CHECKOUT = "Thanks for shopping!\nHere is your order\n\nGelCap { "
         + "name: AcheAway, color: white, size: 8.5, strength: 825.0 }\n";
+    public static final String PRINTCURRENTORDER = "\nHello, Ella. What would you like to order?"
+        + "\nOptions:\n1) Dreamly\n2) AcheAway\n3) Cancel\n\n\nHello, Ella. "
+        + "What would you like to order?"
+        + "\nOptions:\n1) Dreamly\n2) AcheAway\n3) Cancel\n\nHello, Ella.\nYour order contains: "
+        + "\nDreamly: 5.2\nAche Away: 1650.0";
 
     private SoftGelPillStore sgp;
     private ByteArrayOutputStream baos;
     private Scanner testInput;
     private PrintStream testOutput;
-    
+   
+   /**
+    * Method to be completed before each test.
+    * Sets variables and creates the SoftGelPillStore.
+    */ 
     @BeforeEach
     public void setUp() 
     {
@@ -58,6 +71,10 @@ public class SoftGelPillStoreTest
         this.sgp = new SoftGelPillStore(testOutput);
     }
 
+    /**
+     * A test for the constructors of SoftGelPillStore.
+     * Ensures that the getInput and getOutput methods work as well.
+     */
     @Test
     public void testConstructors()
     {
@@ -76,6 +93,9 @@ public class SoftGelPillStoreTest
         assertEquals(testOutput, sgp.getOutput());	
     }		
 
+    /**
+     * Testing the logIn method of the store to make sure the name and age is set. 
+     */
     @Test
     public void testLogIn()
     {
@@ -84,18 +104,22 @@ public class SoftGelPillStoreTest
         assertEquals(LOGINOUTPUT, baos.toString().replaceAll("\r", ""));
     }
 
+    /**
+     * Testing the situation that you try to logout but are not logged in yet.
+     */
     @Test
     public void testLogOutFail1()
     {
-        // In the situation that you're not logged in yet...
         assertFalse(sgp.logOut());
         assertEquals(LOGOUTFAIL, baos.toString().replaceAll("\r", ""));
     }
 
+    /**
+     * Testing the situation that you've logged in but have an uncompleted order.
+     */
     @Test
     public void testLogOutFail2()
     {
-        // In the situation that you're logged in but have an uncompleted order...
         sgp.logIn(NAME, AGE);
         sgp.setInput(new Scanner("1"));
         sgp.order();
@@ -108,40 +132,51 @@ public class SoftGelPillStoreTest
         assertTrue(sgp.logOut());
     }
 
+    /**
+     * Testing for a valid logout in valid circumstance.
+     */
     @Test
     public void testLogOutSuccess()
     {
-        // Testing for a valid logout...
         sgp.logIn(NAME, AGE);
         assertTrue(sgp.logOut());
     }
-
+   
+    /**
+     * Testing that you cannot order if you haven't logged in yet.
+     */
     @Test
     public void testOrderFail()
     {
-        // In the situation that you're not logged in yet...
         sgp.order();
         assertEquals(ORDERFAIL, baos.toString().replaceAll("\r", ""));
     }
 
+    /**
+     * Testing for a valid order.
+     */
     @Test
     public void testOrder()
     {
-        // Testing for a valid order
         sgp.logIn(NAME, AGE);
         sgp.setInput(new Scanner("1"));
         sgp.order();
         assertEquals(ORDER, baos.toString().replaceAll("\r", ""));
     }
 
-
+    /**
+     * Testing that you can't checkout if you haven't logged in or ordered yet.
+     */
     @Test
     public void testCheckOutFail()
     {
         assertEquals(null, sgp.checkOut());
-        assertEquals(CHECKOUTFAIL, baos.toString().replaceAll("\r", ""));
+        assertEquals(CHECKOUTFAIL, baos.toString().replaceAll("\r", ""));        
     }
 
+    /**
+     * Testing for a valid checkout after ordering an adult ache away pill.
+     */
     @Test
     public void testCheckOut()
     {
@@ -151,4 +186,22 @@ public class SoftGelPillStoreTest
         sgp.checkOut();
         assertEquals(ORDER + CHECKOUT, baos.toString().replaceAll("\r", ""));
     }
+
+    /**
+     * Testing the printCurrentOrder method of the store after ordering one of each pill.
+     */
+    @Test
+    public void testPrintCurrentOrder()
+    {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        sgp.setOutput(new PrintStream(out));
+        sgp.logIn(NAME, AGE);
+        sgp.setInput(new Scanner("1"));
+        sgp.order();
+        sgp.setInput(new Scanner("2"));
+        sgp.order();
+        sgp.printCurrentOrder();
+        assertEquals(PRINTCURRENTORDER, out.toString().replaceAll("\r", ""));
+    }
 }
+

@@ -1,5 +1,15 @@
+package pills;
+
+//imports
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 /**
- *    Project SoftGel Part 2
+ *       Project SoftGel Part 3
  *
  * Title:           ChildGelCapFactoryTest
  * Files:           ChildGelCapFactoryTest.java
@@ -8,22 +18,13 @@
  * Professor:       Mx. Sapphire
  *
  * @author          Sashe Nikolov,
- *                  Ella Fulton,
- *                  Hannah Boulet               
+ *                  Hannah Boulet,
+ *                  Ella Fulton
  *
- * Group Name:      SlayFam, Subteam A
- * Sprint:          4
- * @version         4/02/2023
+ * Group Name:      SlayFam, Subteam 2
+ * Sprint:          7
+ * @version         4/24/2023
  */
-
-package pills;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 public class ChildGelCapFactoryTest
 {
@@ -42,7 +43,7 @@ public class ChildGelCapFactoryTest
     @BeforeEach
     public void setUp() 
     {
-        this.cgc = new ChildGelCapFactory();
+        this.cgc = ChildGelCapFactory.getInstance();
         this.oldOut = System.out;
         this.baos = new ByteArrayOutputStream();
         System.setOut(new PrintStream(baos));

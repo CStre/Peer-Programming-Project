@@ -1,5 +1,14 @@
+package pills;
+
+// imports
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 /**
- *  SoftGel Project Part 2
+ *  SoftGel Project Part 3
  * 
  * Title:           DreamlyTest
  * Files:           DreamlyTest.java
@@ -7,21 +16,12 @@
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
  * 
- * @author          Hannah Boulet, 
- *                  Collin Streitman, 
- *                  Sashe Nikolov
+ * @author          Collin Streitman
  * 
- * Group Name:      SlayFam, Subteam B
- * Sprint:          2
- * @version         4/02/2023
+ * Group Name:      SlayFam, Subteam 2
+ * Sprint:          5
+ * @version         4/10/2023
  */
-
-package pills;
-
-// imports
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DreamlyTest
 {
@@ -61,6 +61,18 @@ public class DreamlyTest
         adultDreamly = new AdultDreamly(TEST_CASE, TEST_SOL, TEST_ACT);
     }
 
+    /**
+     * tests that null constant exists in Dreamly class.
+     * tests the NullDreamly class
+     */
+    @Test 
+    public void testNull()
+    {
+        assertNull(Dreamly.NULL);
+        Dreamly girl = new NullDreamly();
+        assertNotNull(girl);
+    }
+    
     /**
      * tests assert equals with name getter.
      */
@@ -135,6 +147,11 @@ public class DreamlyTest
             String solution, String active)
         {
             super(strength, size, color, casing, solution, active);
+        }
+
+        public void accept(Inspector insp)
+        {
+            
         }
     }
 

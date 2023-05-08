@@ -1,5 +1,7 @@
+package pills;
+
 /**
- *   SoftGel Project Part 2
+ *   SoftGel Project Part 3
  * 
  * Title:           GelCap
  * Files:           GelCap.java
@@ -7,16 +9,13 @@
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
  *
- * @author          Collin Streitman,
- *                  Hannah Boulet,
- *                  Sashe Nikolov
+ * @author          Ella Fulton
  *
- * Group Name:      SlayFam, Subteam B
- * Sprint:          2
- * @version         4/02/2023
+ * Group Name:      Slay Fam
+ * Sprint:          3
+ * @version         4/09/2023
  */
 
-package pills;
 public abstract class GelCap
 {
     protected String name;
@@ -157,4 +156,10 @@ public abstract class GelCap
     {
         return active;
     }
+
+    /**
+     * accept method using inspector object.
+     * @param insp Inspector object.
+     */ 
+    public abstract void accept(Inspector insp);
 }

@@ -1,0 +1,105 @@
+Sprint 5 Planning:
+We met to plan sprint 5 as a team on Thursday 4/6 @12pm. We have set a plan to meet every Thursday @12pm to discuss
+the beginning of the new sprint, each of which will be one week. Because we have about 3 and a half weeks, there will
+be 3 large sprints, and 1 small sprint at the end to polish things up and make some finishing touches. We have also
+decided that one person in the group will be a designated "overseer" to be there for anyone who needs help or has
+questions regarding their part of the project. This is perfect because now the subteams can be split exactly equally. 
+It's also important that everyone adheres to the checkstyle and java docs requirements, and doesn't push any code that 
+doesn't compile.
+
+Update: We have decided to switch around a few of our assigned backlog tasks to make more sense. We moved the inspector
+classes up to this sprint so that our program will compile. 
+
+Sprint 5 Backlog:
+> GelCapTests
+> Update AcheAway and Dreamly Test
+> Update ChildAcheAway, AdultAcheAway
+> Update Child, Adult Dreamly Test
+> Create NullDreamly and NullAcheAway Test
+> Update AcheAway and Dreamly
+> Update Child and Adult AcheAway Test
+> Update ChildDreamly, AdultDreamly
+> Create NullDreamly, NullAcheAway
+> Create Inspector classes
+
+Overseer: Ella Fulton
+Subteam 1: Hannah Boulet & Tayo Olofintuyi
+Subteam 2: Collin Streitman & Sashe Nikolov
+
+Overseer task:
+> Update GelCap
+
+Subteam 1 backlog tasks:
+> GelCapTests
+> Update ChildAcheAway, AdultAcheAway
+> Update Child, Adult Dreamly Test
+> Create Inspector classes (4 classes)
+
+Subteam 2 backlog tasks:
+> Update AcheAway and Dreamly
+> Update Child and Adult AcheAway Test
+> Update ChildDreamly, AdultDreamly
+> Create NullDreamly, NullAcheAway
+> Update AcheAway and Dreamly Test
+> Create NullDreamly and NullAcheAway Test
+
+--------------------------------------------------------------------------------------------
+
+END OF SPRINT:
+
+Sprint Retrospective:
+     What went well?
+     What could have gone better?
+     What will we try next?
+     What Questions do we have?
+
+Ella:
+     What went well?
+    I thought the entire sprint went great! We met up on time on Thursday to begin the sprint,
+    and planned everything super well. Even during the sprint we had to make some last minute changes
+    but it worked out great.
+     What could have gone better?
+    Just making sure to consistently update the java docs.
+     What will we try next?
+    Keep it up with the Thursday meetings.
+     What Questions do we have?
+    No questions yet.
+
+Hannah:
+     What went well?
+     This planning went amazingly and we all had our tasks done before we planned for it to be done! We made sure to keep up on eveyone and help eachother throughout it. 
+     The flow went so much smoother, along with the new role of overseer helping the groups with problems. 
+     Having someone who oversees everyone and makes sure checkstyle is perfect and everything is organized.
+     What could have gone better?
+     We all would constantly forget to do the make check for checkstyle. But everyone at the end got the hang of it!
+     What will we try next?
+     Make sure everyone does make check after everything they have made.
+     What Questions do we have?
+     Maybe if we ever have a similar project we could keep the overseer role?
+
+Tayo:
+     What went well?
+          We planned very well! During our planning session for this sprint we also planned the next few sprints so that our work flow will be smoother. Also we added a new role for the next few sprints which is the overseer. Having someone who oversees the whole process during each sprint has been helpful in keeping things organized.
+     What could have gone better?
+          I did forget to do make check and update the java docs before pushing which one of my other team members had to fix. I will be more careful next time. Other than that this sprint was pretty good.
+     What will we try next?
+          We will try to double check ourselves more so that we have multiple levels of checks before finishing a sprint.
+     What Questions do we have?
+          I don't really have any questions.
+
+Sashe:
+     What went well? Big improvement on planning, created a google doc to assign our tasks and kept track of when they were checked off. Tasks were finished on time. Everything felt a lot smoother!
+     What could have gone better? We still had to move around tasks that were needed much earlier from later sprites, but we were able to adapt easily.
+     What will we try next? Try to keep track of github merges and changes, since at one point we realized files were missing from main. As the overseer for the next sprint, I will watch over the changes.
+     What Questions do we have? No questions for now, this sprint felt pretty smooth. 
+
+Collin:
+     What went well?
+     Massive improvements in planning where we used a google doc to check tasks off. This was a great way to stay organized and know how everyone is doing. We also labeled each task with the name of our branch we were working on.  
+     What could have gone better?
+     Maybe stay up to date more often but other than that, this went really smooth and not much needed to change.
+     What will we try next?
+     Maybe do the same thing but in this case also include status reports. 
+     What Questions do we have?
+     Everything slayed, honestly nothing I have questions about right now.
+

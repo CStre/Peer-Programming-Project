@@ -1,5 +1,12 @@
+package pills;
+
+//imports
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 /**
- *  SoftGel Project Part 2
+ *  SoftGel Project Part 3
  * 
  * Title:           GelCapTest
  * Files:           GelCapTest.java
@@ -7,21 +14,12 @@
  * Course:          CS_3667
  * Professor:       Mx. Sapphire
  * 
- * @author          Hannah Boulet, 
- *                  Collin Streitman, 
- *                  Sashe Nikolov
+ * @author          Tayo Olofintuyi
  * 
- * Group Name:      SlayFam, Subteam B
- * Sprint:          2
- * @version         4/02/2023
+ * Group Name:      SlayFam, Subteam 1
+ * Sprint:          5
+ * @version         4/10/2023
  */
-
-package pills;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 
 public class GelCapTest
 {
@@ -166,6 +164,11 @@ public class GelCapTest
             String solution, String active)
         {
             super(name, strength, size, color, casing, solution, active);
+        }
+
+        public void accept(Inspector insp)
+        {
+
         }
     }
 }

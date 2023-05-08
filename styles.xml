@@ -13,7 +13,7 @@
         <property name="severity" value="warning"/>
         <property name="tabWidth" value="4"/>
         <property name="ignorePattern" value="^$"/>
-        <property name="max" value="100"/>
+        <property name="max" value="110"/>
     </module>
 
     <module name="TreeWalker">
@@ -35,7 +35,7 @@
         <module name="MethodLength">
             <property name="severity" value="warning"/>
             <property name="countEmpty" value="false"/>
-            <property name="max" value="80"/>
+            <property name="max" value="90"/>
         </module>
         <module name="LeftCurly">
             <property name="option" value="nl"/>
@@ -72,7 +72,7 @@
         <module name="ParameterName"/>
         <module name="StaticVariableName"/>
         <module name="MagicNumber">
-            <property name="ignoreNumbers" value="-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,20,32,50,100,212"/>
+            <property name="ignoreNumbers" value="-1,0,1,2,3,4,5,6,7,8,9,10,11,18,12,13,91,14,15,16,20,32,50,100,212"/>
         </module>
         <module name="SimplifyBooleanReturn"/>
     </module>
